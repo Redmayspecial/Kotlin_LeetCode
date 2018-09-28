@@ -23,8 +23,8 @@ class Solution {
             return emptySet
         } else {
             for (outerLoopIndex in 0..arraySize) {//match the range to the array offset
-                for (innerLoopIndex in outerLoopIndex..arraySize) { // start where the outer Loop leaves off
-
+                for (innerLoopIndex in outerLoopIndex+1..arraySize) { // start where the outer Loop leaves off
+                    println("checking ${nums[outerLoopIndex]} with ${nums[innerLoopIndex]}")
                     if (nums[outerLoopIndex] < target) {
                         // make sure the number is less than the target, otherwise move on.
 
@@ -56,24 +56,31 @@ class Solution {
 
 fun main(args: Array<String>) {
 
-    val testArray = intArrayOf(2,7,11,15)
-    val testTarget= 9
-    val testAnswer = Solution()
+//    val testArray = intArrayOf(2,7,11,15)
+//    val testTarget= 9
+//    val testAnswer = Solution()
+//
+//    println("Testing the list of ${testArray.asList()} for two numbers that add up to $testTarget")
+//    println(testAnswer.twoSum(testArray,testTarget).asList())
 
-    println("Testing the list of ${testArray.asList()} for two numbers that add up to $testTarget")
-    println(testAnswer.twoSum(testArray,testTarget).asList())
+//    val testArray = intArrayOf(16,11,3,7)
+//    val testTarget= 9
+//    val testAnswer = Solution()
+//
+//    println("Testing the list of ${testArray.asList()} for two numbers that add up to $testTarget")
+//    println(testAnswer.twoSum(testArray,testTarget).asList())
 
-    val list2 = intArrayOf(2,7,11,15)
-    val target2 = 11
+    val list2 = intArrayOf(2,1,3,2)
+    val target2 = 4
     val answer2 = Solution()
 
     println("Testing the list of ${list2.asList()} for two numbers that add up to $target2")
     if (answer2.twoSum(list2,target2).isEmpty()) {
-           println("No such solution")
+           println("No such solution, empty set.")
     } else {
         println(answer2.twoSum(list2, target2).asList())
     }
-//
+////
 //    val list3 = intArrayOf()
 //    val target3 = 3
 //    val answer3 = Solution()
