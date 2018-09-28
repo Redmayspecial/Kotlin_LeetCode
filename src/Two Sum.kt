@@ -56,34 +56,32 @@ class Solution {
 
 fun main(args: Array<String>) {
 
-    val testlist = intArrayOf(2,7,11,15)
-    val target = 9
-    val answer = Solution()
+    val testArray = intArrayOf(2,7,11,15)
+    val testTarget= 9
+    val testAnswer = Solution()
 
-    println("Testing the list of ${testlist.asList()} for two numbers that add up to $target")
-    println(answer.twoSum(testlist,target).asList())
+    println("Testing the list of ${testArray.asList()} for two numbers that add up to $testTarget")
+    println(testAnswer.twoSum(testArray,testTarget).asList())
 
-//    val list2 = intArrayOf(2,7,11,15)
-//    val target2 = 11
-//    val answer2 = Solution()
-//
-//    println("Testing the list of ${list2.asList()} for two numbers that add up to $target2")
-//    println(answer2.twoSum(list2,target2).asList())
+    val list2 = intArrayOf(2,7,11,15)
+    val target2 = 11
+    val answer2 = Solution()
+
+    println("Testing the list of ${list2.asList()} for two numbers that add up to $target2")
+    if (answer2.twoSum(list2,target2).isEmpty()) {
+           println("No such solution")
+    } else {
+        println(answer2.twoSum(list2, target2).asList())
+    }
 //
 //    val list3 = intArrayOf()
 //    val target3 = 3
 //    val answer3 = Solution()
 //
 //    println("Testing the list of ${list3.asList()} for two numbers that add up to $target3")
-//    println(answer3.twoSum(list3,target).asList())
+//    println(answer3.twoSum(list3,target3).asList())
 
 
-    val list = intArrayOf(2,7,11,15)
-    val target = 9
-    val answer = Solution()
-
-    println("Testing the list of ${list.asList()} for two numbers that add up to $target")
-    println(answer.twoSum(list,target).asList())
 
 
 
